@@ -271,7 +271,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm_te" name="sentMessage" method="POST" novalidate action="{{url('/email') }}">
+            <form id="contactForm_te" name="sentMessage" method="POST" action="{{url('/email') }}">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">

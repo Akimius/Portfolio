@@ -41,5 +41,11 @@ class DefaultController extends Controller
         $user = User::find(1);
 
         Mail::to($user)->send(new ContactMail($data));
+
+        // return redirect('/');
+
+        return view('emails.thankyou', [
+            'user' => $user,
+        ]);
     }
 }

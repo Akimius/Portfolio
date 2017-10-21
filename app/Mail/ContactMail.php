@@ -31,7 +31,7 @@ class ContactMail extends Mailable
     public function build()
     {
 
-        return $this->subject('From Portfolio')
+        return $this->subject('From Akim Portfolio')
             ->markdown('emails.tmpl', [
 
                 'msg' => $this->data['message'],
