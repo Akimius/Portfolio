@@ -31,13 +31,15 @@ class ContactMail extends Mailable
     public function build()
     {
 
-        return $this->subject('Contact from our site')
-            ->view('emails.tmpl', [
+        return $this->subject('From Portfolio')
+            ->markdown('emails.tmpl', [
 
                 'msg' => $this->data['message'],
                 'user' => $this->data['name'],
-                'email' => $this->data['email']
+                'email' => $this->data['email'],
+                'tel' => $this->data['tel'],
 
             ]);
+
     }
 }
