@@ -38,10 +38,10 @@
                                 <a href="#" onclick="event.preventDefault();
                                             this.children[0].submit();">
 
-                                    {{--<form action="{{ route('$categories.destroy', $category->id) }}" method="POST" style="display: none;">--}}
-                                        {{--{{ csrf_field() }}--}}
-                                        {{--<input type="hidden" name="_method" value="delete">--}}
-                                    {{--</form>--}}
+                                    <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="delete">
+                                    </form>
                                     <i class="glyphicon glyphicon-remove"></i>
                                 </a>
                             </td>

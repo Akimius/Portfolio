@@ -6,6 +6,9 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App;
+use File;
+
 class CategoriesController extends Controller
 {
     /**
@@ -83,13 +86,9 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $categories = Category::all();
-
-
-
+        $category = Category::find($id);
         return view('dashboard.category.edit', [
-
-            'categories' => $categories
+            'category' => $category
         ]);
     }
 
@@ -113,7 +112,7 @@ class CategoriesController extends Controller
         $file = $request->file('preview');
 
         $category = Category::find($id);
-        dd($categories);
+
         if(!empty($file)){
             $this->validate($request, [
                 'preview' => 'mimes:jpeg,png|max:15000'
@@ -147,11 +146,13 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        $path = public_path('img/category/');
+        $path = public_path('img\category');
 
         $category = Category::find($id);
 
         $file = $path . $category->preview;
+
+
 
         if(File::isFile($file)){
             File::delete($file);

@@ -2,10 +2,10 @@
 @section('content')
     <div class="row">
         <div class="col-md-6">
-            <form method="post" action="{{ route('categories.update', $categories->id)  }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('categories.update', $category->id) }}" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="inputName">Name</label>
-                    <input type="text" name="category" class="form-control" id="inputName" placeholder="Name" value="{{ old('category') }}">
+                    <input type="text" name="category" class="form-control" id="inputName" placeholder="Name" value="{{ $category->category }}">
                     @if ($errors->has('category'))
                         <span class="help-block">
                     <strong class="text-danger">
@@ -30,8 +30,7 @@
 
                 <div class="form-group">
                     <label for="inputDescription">Description</label>
-                    <textarea name="description" id="inputDescription" cols="30" rows="10" class="form-control">{{ old('description') }}
-                </textarea>
+                    <textarea name="description" id="inputDescription" cols="30" rows="10" class="form-control">{{ $category->description }}</textarea>
                     @if ($errors->has('description'))
                         <span class="help-block">
                     <strong class="text-danger">
@@ -43,7 +42,9 @@
 
                 {{ csrf_field() }}
 
-                <button type="submit" class="btn btn-info">CREATE</button>
+                <input type="hidden" name="_method" value="patch">
+
+                <button type="submit" class="btn btn-info">UPDATE</button>
             </form>
         </div>
         <div class="col-md-6"></div>
