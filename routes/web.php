@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Project;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,4 +38,6 @@ Route::get('/test', function () {
 Route::resource('/dashboard/categories', 'Backend\CategoriesController');
 
 Route::post('/email', 'Frontend\DefaultController@email');
+
+Route::resource('/dashboard/team', 'Backend\TeamsController');
 

@@ -48,6 +48,7 @@
                 <ul class="nav nav-sidebar">
                     <li><a href="{{ url('/dashboard/projects') }}">Projects</a></li>
                     <li><a href="{{ url('/dashboard/categories') }}">Categories</a></li>
+                    <li><a href="{{ url('/dashboard/team') }}">Team members</a></li>
 
                 </ul>
             </div>
