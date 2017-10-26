@@ -34,7 +34,7 @@
                             <td>{{ $team->facebook }}</td>
                             <td>{{ $team->linked }}</td>
                             <td>
-                                <a href="/dashboard/categories/{{ $team->id }}/edit">
+                                <a href="/dashboard/team/{{ $team->id }}/edit">
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </a>
                             </td>
@@ -42,7 +42,7 @@
                                 <a href="#" onclick="event.preventDefault();
                                             this.children[0].submit();">
 
-                                    <form action="{{ route('categories.destroy', $team->id) }}" method="POST" style="display: none;">
+                                    <form action="{{ route('team.destroy', $team->id) }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                         <input type="hidden" name="_method" value="delete">
                                     </form>

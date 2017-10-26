@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-md-6">
             <form method="post" action="{{ url( '/dashboard/categories') }}" enctype="multipart/form-data">
+
                 <div class="form-group">
                     <label for="inputName">Name</label>
                     <input type="text" name="category" class="form-control" id="inputName" placeholder="Name" value="{{ old('category') }}">
@@ -14,7 +15,6 @@
                 </span>
                     @endif
                 </div>
-
 
                 <div class="form-group">
                     <label for="inputPreview">Preview</label>
