@@ -10,6 +10,7 @@ use App\Models\Category;
 use Mail;
 use App\User;
 use App\Mail\ContactMail;
+use App\Team;
 
 class DefaultController extends Controller
 {
@@ -17,9 +18,13 @@ class DefaultController extends Controller
     {
         $projects = Project::all();
         $categories = Category::all();
+        $teams = Team::all();
+
+
         return view('default.index', [
             'projectlist' => $projects,
-            'categories' => $categories
+            'categories' => $categories,
+            'teams' => $teams,
         ]);
     }
 

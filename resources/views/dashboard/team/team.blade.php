@@ -17,8 +17,6 @@
                         <th>Name</th>
                         <th>Surname</th>
                         <th>Position</th>
-                        <th>Facebook id</th>
-                        <th>LinkedIn ID</th>
 
                         <th>Edit</th>
                         <th>Delete</th>
@@ -31,8 +29,6 @@
                             <td>{{ $team->name }}</td>
                             <td>{{ $team->surname }}</td>
                             <td>{{ $team->position }}</td>
-                            <td>{{ $team->facebook }}</td>
-                            <td>{{ $team->linked }}</td>
                             <td>
                                 <a href="/dashboard/team/{{ $team->id }}/edit">
                                     <i class="glyphicon glyphicon-pencil"></i>

@@ -25,8 +25,11 @@ Route::resource('/dashboard/projects', 'Backend\ProjectsController');
 
 Route::get('/test', function () {
 	$projects = Project::all();
+
 	$categories = Category::all();
+
 	$projectscat = Category::getCountProjectsByCategory();
+
 	return view('test', [
 		'projects' => $projects,
 		'categories' => $categories,

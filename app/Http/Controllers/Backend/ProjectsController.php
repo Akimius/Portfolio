@@ -19,9 +19,11 @@ class ProjectsController extends Controller
     public function index()
     {
         $projects = Project::all();
+        $categories = Category::all();
         
         return view('dashboard.project', [
-            'projects' => $projects
+            'projects' => $projects,
+            'categories' => $categories
         ]);
     }
 

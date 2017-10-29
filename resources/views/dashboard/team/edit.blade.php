@@ -16,7 +16,31 @@
                         </span>
                     @endif
                 </div>
+                <div class="form-group">
+                    <label for="inputSurname">Surname</label>
+                    <input type="text" name="surname" class="form-control" id="inputSurname"
+                           placeholder="Surname" value="{{ $team->surname }}">
+                    @if ($errors->has('surname'))
+                        <span class="help-block">
+                            <strong class="text-danger">
+                                {{ $errors->first('surname') }}
+                            </strong>
+                        </span>
+                    @endif
+                </div>
 
+                <div class="form-group">
+                    <label for="inputPostion">Position</label>
+                    <input type="text" name="position" class="form-control" id="inputPosition"
+                           placeholder="Position" value="{{ $team->position }}">
+                    @if ($errors->has('position'))
+                        <span class="help-block">
+                            <strong class="text-danger">
+                                {{ $errors->first('position') }}
+                            </strong>
+                        </span>
+                    @endif
+                </div>
 
                 <div class="form-group">
                     <label for="inputPreview">Preview</label>

@@ -19,8 +19,8 @@ class CreateTeamsTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('position');
-            $table->string('facebook');
-            $table->string('linked');
+            // $table->string('facebook');
+            // $table->string('linked');
 
             $table->string('preview');
         });

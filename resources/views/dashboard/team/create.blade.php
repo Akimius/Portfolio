@@ -44,33 +44,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="inputFacebook">Facebook ID</label>
-                    <input type="text" name="facebook" class="form-control"
-                           id="inputFacebook" placeholder="Facebook ID" value="{{ old('facebook') }}">
-                    @if ($errors->has('facebook'))
-                        <span class="help-block">
-                            <strong class="text-danger">
-                                {{ $errors->first('facebook') }}
-                            </strong>
-                        </span>
-                    @endif
-                </div>
-
-                <div class="form-group">
-                    <label for="inputLinked">LinkedIN ID</label>
-                    <input type="text" name="linked" class="form-control"
-                           id="inputLinked" placeholder="Facebook ID" value="{{ old('linked') }}">
-                    @if ($errors->has('linked'))
-                        <span class="help-block">
-                            <strong class="text-danger">
-                                {{ $errors->first('linked') }}
-                            </strong>
-                        </span>
-                    @endif
-                </div>
-
-
-                <div class="form-group">
                     <label for="inputPreview">Preview</label>
                     <input type="file" class="form-control" id="inputPreview" placeholder="Prview" name="preview">
                     @if ($errors->has('preview'))

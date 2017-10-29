@@ -52,8 +52,6 @@ class TeamsController extends Controller
             'name' => 'required|max:60',
             'surname' => 'required|max:60',
             'position' => 'required|max:60',
-            'facebook' => 'required|max:60',
-            'linked' => 'required|max:60',
 
             'preview' => 'required|mimes:jpeg,png|max:15000'
         ]);
@@ -155,7 +153,7 @@ class TeamsController extends Controller
         $team = Team::find($id);
 
         $file = $path . $team->preview;
-        
+
         if(File::isFile($file)){
             File::delete($file);
         }

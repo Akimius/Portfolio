@@ -20,6 +20,8 @@ class CategoriesController extends Controller
     {
         $categories = Category::all();
 
+
+
         return view('dashboard.category', [
             'categories' => $categories
         ]);
